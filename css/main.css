@@ -6,24 +6,415 @@
 
 
 /*
+ *	Base
+ */
+
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+body {
+	font-family: 'Arimo', sans-serif;
+}
+
+
+a {
+	color: #000;
+}
+
+
+/*
  *	Layout
  */
 
-.header {}
-.footer {}
+.header {
+	margin: 0 0 30px;
+	background: #fff url(../img/header-bg.png) no-repeat top center;
+}
+.footer {
+	background: #ffd302 url(../img/footer-bg.png) no-repeat top center;
+}
+.header,
+.footer {
+	height: 160px;
+	font-size: 12px
+}
 .main {}
 
 
+/*
+ *
+ */
+
+ h1 {
+ 	color: #ed1c24;
+ }
+ h2 {}
+ h3 {
+ 	font-size: 14px;
+ 	line-height: 20px;
+ }
+
+
+/*
+ *	Logo
+ */
+
+.branding {
+	width: 90px;
+	height: 130px;
+	background: url(../img/sprites.png) no-repeat 0 -205px;
+}
+.branding a {
+	display: block;
+}
+.branding,
+.branding a {
+	width: 90px;
+	height: 130px;
+}
+.nav-primary > .nav-pills {
+	margin: 0;
+	border-left: 1px solid #ffd302;
+}
+.nav-primary > .nav-pills > li {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #ffd302;
+}
+.nav-primary > .nav-pills > li:last-child {
+	border-right: none;
+}
+.nav-primary > .nav-pills > li > a {
+	padding-left: 23px;
+	padding-right: 23px;
+	line-height: 59px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.nav-primary > .nav-pills > li > a:hover {
+	background: none;
+	color: #ed1c24;
+}
+
+
+.phones {
+	float: right;
+	clear: right;
+}
+
+.contact-list li {
+	width: 160px;
+	padding: 0 15px 0;
+	border-left: 1px dashed #000;
+	float: left;
+}
+.contact-list li:first-child {
+	border: none;
+	padding-left: 0;
+}
+.contact-list .tel {
+	display: block;
+	font-size: 18px;
+}
+.contact-list .local {
+	font-size: 10px;
+	line-height: 12px;
+}
+.header .contact-list .local {
+	color: #626262;
+}
+
+.portrait {
+	display: block;
+	margin-top: 7px;
+	width: 58px;
+	height: 58px;
+	border: 3px solid #000;
+	border-radius: 30px;
+	background: #d9d9d9;
+}
+
+.portrait .icon-truly-atendente {
+	position: relative;
+	top: -13px;
+	left: 1px;
+}
+
+/*
+ *
+ */
+
+.hero {
+	position: relative;
+	margin-bottom: 50px;
+	color: #464646;
+}
+
+.hero img {
+	border: 1px solid #b5b2b1;
+	-webkit-box-shadow: -3px 3px 3px #dad8d8;
+	box-shadow: -3px 3px 3px #dad8d8;
+}
+
+.hero hgroup {
+	padding: 22px 0 0 300px;
+}
+.hero h1 {
+	font-size: 28px;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: #464646;
+}
+.hero h2 {
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 100;
+}
+.hero .icon-truly-carro {
+	position: absolute;
+	bottom: -30px;
+	left: 30px;
+}
+.hero .icon-truly-bandeira {
+	margin-right: 5px;
+}
+
+
+/*
+ *
+ */
+
+.box {
+	border: 1px solid #d9d9d9;
+	border-left: none;
+	border-right: none;
+	background: #fbfbfb; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fbfbfb 0%, #eeeeee 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbfb), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fbfbfb 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fbfbfb 0%,#eeeeee 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fbfbfb 0%,#eeeeee 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fbfbfb 0%,#eeeeee 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+
+	font-size: 12px;
+	text-align: center;
+}
+/*:not(:first-child)*/
+.box .box-sub {
+	height: 100%;
+	padding-right: 20px;
+	border-right: 1px solid #d9d9d9;
+}
+.box .box-sub:first-child {
+	padding: 0;
+	border-left: 1px solid #d9d9d9;	
+}
+.box > .row {
+	height: 165px;
+}
+
+.description {
+	display: block;
+	margin: 5px 0 0;
+}
+.value {
+	line-height: 46px;
+	font-size: 36px;
+	font-weight: 800;
+}
+
+.callout {
+	margin: 30px 0;
+	text-align: center;
+}
+.callout-title {
+	display: inline;
+}
+
+.post-bd .row {
+	
+	margin-top: 40px;
+}
+.post-bd .row:last-child {
+	/*margin-top: 40px;*/
+	margin-bottom: 40px;
+}
+
+.service {
+}
+.service-bd {
+	margin: 25px 0 0;
+}
+.service h2 {
+	font-size: 18px;
+	line-height: 18px;
+}
+.service h3 {
+	font-size: 14px;
+	line-height: 14px;
+	font-style: italic;
+}
+.service-ft {
+	margin-top: 30px;
+}
 
 
 
+.gip {
+	padding: 60px 0 0;
+	margin: 14px 0 40px;
+	height: 305px;
+	position: relative;
+}
+
+.gip .icon-truly-surfista {
+	position: absolute;
+	right: 0;
+	top: 0px;
+}
+
+
+.copyright {
+	position: relative;
+	bottom: -50px;
+	font-size: 12px;
+
+}
+
+.contact {
+	padding-top: 30px;
+}
+.contact h4 {
+	color: #ed1c24;
+	text-transform: uppercase;
+	font-size: 14px;
+}
 
 
 
+[class^="icon-pragas-"], 
+[class*=" icon-pragas-"],
+[class^="icon-truly-"], 
+[class*=" icon-truly-"] {
+	background: url(../img/sprites.png) no-repeat;
+}
+
+[class^="icon-pragas-"], 
+[class*=" icon-pragas-"] {
+	width: 120px;
+	height: 70px;
+}
+
+.icon-pragas-pulgas-carrapatos {
+	background-position: 0 0
+}
+.icon-pragas-baratas {
+	background-position: -150px 0
+}
+.icon-pragas-baratas-formigas {
+	background-position: -280px 0
+}
+.icon-pragas-baratas-formigas-tracas {
+	background-position: -420px 0
+}
+.icon-pragas-residencia {
+	background-position: -560px 0
+}
+
+.icon-truly-gip {
+	width: 140px;
+	height: 130px;
+	background-position: 0 -75px;
+}
+
+.icon-truly-carro {
+	width: 250px;
+	height: 270px;
+	background-position: -140px -75px;
+}
+.icon-truly-bandeira {
+	width: 20px;
+	height: 16px;
+	line-height: 16px;
+	background-position: -700px 2px;
+}
+.icon-truly-surfista {
+	width: 390px;
+	height: 305px;
+	background-position: -450px -75px; 
+}
+.icon-truly-atendente {
+	width: 42px;
+	height: 61px;
+	background-position: -798px 0px; 
+}
 
 
+/*
+ * Image replacement
+ */
 
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
 
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
 
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
 
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
 
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
